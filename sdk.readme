@@ -1,0 +1,36 @@
+hisi SDK在ubuntu20.04上面编译可能出现的问题以及解决方法：
+
+1. hi_gzip编译错误
+
+fseeko.c: In function 'rpl_fseeko':`
+
+`fseeko.c:110:4: error: #error "Please port gnulib fseeko.c to your platform! Look at the code in fseeko.c, then report this to bug-gnulib."`
+
+解决方法：
+cp hi_gzip_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5/osdrv/tools/pc/hi_gzip/Makefile
+
+2. eudev编译错误
+
+解决方法：
+
+cp eudev-3.2.7_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5/osdrv/tools/board/eudev-3.2.7/Makefile
+
+3.squashfs编译错误
+
+mksquashfs.c: In function ‘create_inode’:
+mksquashfs.c:987:24: error: called object ‘major’ is not a function or function pointer
+  987 |   unsigned int major = major(buf->st_rdev);
+
+解决方法：
+
+cp squashfs4.3_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/osdrv/tools/pc/squashfs4.3/Makefile
+cp squashfs4.4.tar.gz /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/osdrv/tools/pc/squashfs4.3/.
+
+
+4.-Werror=format-truncation= 错误
+/mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/reference/tools/upgrade_generate/src/hi_upgrade_generate_main.c:375:68: error: ‘%s’ directive output may be truncated writing up to 63 bytes into a region of size between 54 and 117 [-Werror=format-truncation=]
+
+解决方法：
+cp hi_upgrade_generate_main.c /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/reference/tools/upgrade_generate/src/hi_upgrade_generate_main.c
+
+cp init2bin_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/reference/dashcam/modules/param/ini2bin/Makefile
