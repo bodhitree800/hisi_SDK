@@ -34,3 +34,26 @@ cp squashfs4.4.tar.gz /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G
 cp hi_upgrade_generate_main.c /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/reference/tools/upgrade_generate/src/hi_upgrade_generate_main.c
 
 cp init2bin_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/reference/dashcam/modules/param/ini2bin/Makefile
+
+5. sdk的主要编译命令，参见：
+/mnt/ext/aec/hi3559/doc/01.software/board/HiMobileCam SDK安装使用说明.pdf
+
+make all SDK 包全编译，包括 osdrv,drv,middleware,reference
+make menuconfig SDK 配置选择
+make clean SDK 包编译清空，包括 osdrv,drv,middleware,reference
+make prepare SDK 包编译准备，比如内存分配传递给各子系统
+make osdrv osdrv 目录整体编译
+make osdrv_clean osdrv 目录清空目标文件
+make osdrv_distclean osdrv 目录清空所有目标文件及镜像发布目录
+make drv drv 整体编译，第一次编译请先 make osdrv
+make drv_clean drv 清空目标文件
+make drv_distclean drv 清空所有目标文件及驱动模块发布目录
+make ndk ndk 整体编译，第一次编译请先 make osdrv
+make ndk_clean ndk 清空目标文件
+make ndk_distclean 同 make ndk_clean
+make middleware middleware 目录整体编译, 第一次编译时请先 make osdrv。
+make middleware_clean middleware 目录整体编译清空
+make middleware_distclean 同 make middleware_clean
+make reference reference 目录整体编译, 第一次编译时请先 make osdrv、make drv、make middleware。
+make reference_clean reference 目录整体编译清空
+make reference_distclean reference 目录清空所有目标文件及镜像发布目录
