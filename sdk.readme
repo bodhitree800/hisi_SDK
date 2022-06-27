@@ -9,11 +9,17 @@ fseeko.c: In function 'rpl_fseeko':`
 解决方法：
 cp hi_gzip_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5/osdrv/tools/pc/hi_gzip/Makefile
 
+# for hi3516
+cp hi_gzip_Makefile /mnt/ext/hi3516/Hi3516CV500R001C02SPC020/01.software/board/Hi3516CV500_SDK_V2.0.2.0/osdrv/tools/pc/hi_gzip/Makefile
+
 2. eudev编译错误
 
 解决方法：
 
 cp eudev-3.2.7_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5/osdrv/tools/board/eudev-3.2.7/Makefile
+
+# for hi3516
+cp eudev-3.2.7_Makefile /mnt/ext/hi3516/Hi3516CV500R001C02SPC020/01.software/board/Hi3516CV500_SDK_V2.0.2.0/osdrv/tools/board/eudev-3.2.7/Makefile
 
 3.squashfs编译错误
 
@@ -25,6 +31,10 @@ mksquashfs.c:987:24: error: called object ‘major’ is not a function or funct
 
 cp squashfs4.3_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/osdrv/tools/pc/squashfs4.3/Makefile
 cp squashfs4.4.tar.gz /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5_5.3G/osdrv/tools/pc/squashfs4.3/.
+
+# for hi3516
+cp squashfs4.3_Makefile /mnt/ext/hi3516/Hi3516CV500R001C02SPC020/01.software/board/Hi3516CV500_SDK_V2.0.2.0/osdrv/tools/pc/squashfs4.3/Makefile
+cp squashfs4.4.tar.gz /mnt/ext/hi3516/Hi3516CV500R001C02SPC020/01.software/board/Hi3516CV500_SDK_V2.0.2.0/osdrv/tools/pc/squashfs4.3/.
 
 
 4.-Werror=format-truncation= 错误
