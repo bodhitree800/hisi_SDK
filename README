@@ -21,6 +21,9 @@ cp eudev-3.2.7_Makefile /mnt/ext/aec/hi3559/Hi3559V200_MobileCam_SDK_V1.0.1.5/os
 # for hi3516
 cp eudev-3.2.7_Makefile /mnt/ext/hi3516/Hi3516CV500R001C02SPC020/01.software/board/Hi3516CV500_SDK_V2.0.2.0/osdrv/tools/board/eudev-3.2.7/Makefile
 
+# for hi3559v200 SDK2.0.1.0
+cp eudev-3.2.9_Makefile /mnt/ext/hisi/smp_hi3559v200/Hi3559V200_SDK_V2.0.1.0/open_source/eudev/Makefile
+
 3.squashfs编译错误
 
 mksquashfs.c: In function ‘create_inode’:
